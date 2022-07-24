@@ -26,7 +26,7 @@ pipeline {
     environment {
         URL1 = "google.com"
         SSH = credentials("CENTOS")
-        SSH1 = credentials("newrelic-api-key")
+        SSH1 = credentials("new-secret-key")
     }
     stages {
         stage('ONE') {
