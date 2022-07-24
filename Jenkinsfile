@@ -23,7 +23,6 @@
 
 pipeline {
     agent any
-    agent none
     environment {
         URL1 = "google.com"
     }
