@@ -26,6 +26,7 @@ pipeline {
     environment {
         URL1 = "google.com"
         SSH = credentials("CENTOS")
+        SSH1 = credentials("newrelic-api-key")
     }
     stages {
         stage('ONE') {
@@ -33,6 +34,7 @@ pipeline {
                 sh 'echo ${URL1}'
                 echo SSH
                 sh 'env'
+                sh 'echo ${SSH1} | base64'
             }
         }
     }
