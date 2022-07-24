@@ -32,6 +32,7 @@ pipeline {
             steps{
                 sh 'echo ${URL1}'
                 echo SSH
+                sh 'env'
             }
         }
     }
