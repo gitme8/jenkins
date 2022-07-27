@@ -51,7 +51,7 @@ pipeline {
 
         choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
 
-        password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
+        password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter the password')
     }
     stages {
         stage('Example') {
