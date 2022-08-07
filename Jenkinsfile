@@ -129,30 +129,30 @@
 //     }
 // }
 
-pipeline {
-    agent any
-    stages {
-
-        stage('One-Sequential') {
-            steps {
-                sh 'sleep 40'
-            }
-        }
-
-        stage('Two-Parallel') {
-            parallel {
-                stage('Two1') {
-                    steps {
-                        sh 'sleep 50'
-                    }
-                }
-
-                stage('Two2') {
-                    steps {
-                        sh 'sleep 70'
-                    }
-                }
-            }
-        }
-    }
-}
+// pipeline {
+//     agent any
+//     stages {
+//
+//         stage('One-Sequential') {
+//             steps {
+//                 sh 'sleep 40'
+//             }
+//         }
+//
+//         stage('Two-Parallel') {
+//             parallel {
+//                 stage('Two1') {
+//                     steps {
+//                         sh 'sleep 50'
+//                     }
+//                 }
+//
+//                 stage('Two2') {
+//                     steps {
+//                         sh 'sleep 70'
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
