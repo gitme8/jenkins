@@ -132,6 +132,7 @@
 pipeline {
     agent any
     stages {
+
         stage('One-Sequential') {
             steps {
                 sh 'sleep 40'
@@ -140,9 +141,15 @@ pipeline {
 
         stage('Two-Parallel') {
             parallel {
-                stage('Two'){
+                stage('Two1') {
                     steps {
-                        sh 'sleep 90'
+                        sh 'sleep 50'
+                    }
+                }
+
+                stage('Two2') {
+                    steps {
+                        sh 'sleep 70'
                     }
                 }
             }
