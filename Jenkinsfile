@@ -70,15 +70,52 @@
 //     }
 // }
 
+// pipeline {
+//     agent any
+//     tools {
+//        maven 'maven-3.8.6'
+//     }
+//     stages {
+//         stage('Maven') {
+//             steps {
+//                 sh 'mvn --version'
+//             }
+//         }
+//     }
+// }
+
+// pipeline {
+//     agent any
+//     stages {
+//         stage('Example') {
+//             input {
+//                 message "Should we continue?"
+//                 ok "Yes, we should."
+//                 submitter "alice,bob"
+//                 parameters {
+//                     string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+//                 }
+//             }
+//             steps {
+//                 echo "Hello, ${PERSON}, nice to meet you."
+//             }
+//         }
+//     }
+// }
+
 pipeline {
     agent any
-    tools {
-       maven 'maven-3.8.6'
-    }
+
     stages {
-        stage('Maven') {
+        stage('DEV') {
             steps {
-                sh 'mvn --version'
+                echo "DEV"
+            }
+        }
+         stage('PROD') {
+            steps {
+                 echo "PROD"
+
             }
         }
     }
