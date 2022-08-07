@@ -76,7 +76,7 @@ pipeline {
        maven 'maven-3.8.6'
     }
     stages {
-        stage('Maven'){
+        stage('Maven') {
             steps {
                 sh 'mvn --version'
             }
